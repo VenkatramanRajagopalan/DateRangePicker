@@ -1,10 +1,10 @@
 # DateRangePicker
 A Simple, Easy to use, Materialistic DateRangePicker library for Android.
 
-# Screenshots
+## Screenshots
 ![Screenshot 1](/screenshots/screenshot1.jpeg?raw=true "From Date")   ![Screenshot 2](/screenshots/screenshot2.jpeg?raw=true "To Date")
 
-# Usage
+## Usage
 Add this to project level gradle file
 ```
 allprojects {
@@ -20,7 +20,7 @@ dependencies {
 	compile 'com.github.VenkatramanRajagopalan:DateRangePicker:1.0'
 }
 ```
-# Example
+## Example
 Add following lines in the activity file
 ```
 showCalendar.setOnClickListener(new View.OnClickListener() {
@@ -33,7 +33,7 @@ showCalendar.setOnClickListener(new View.OnClickListener() {
 });
 
 ```
-# Get From and To dates
+### Get From and To dates
 
 Make activity implement OnDateRangePickedListener() and override default method
 ```
