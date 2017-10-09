@@ -1,8 +1,8 @@
 # DateRangePicker
 DateRangePicker library for Android
 
-# Usage
-Add the following line to project level gradle file
+# Add DateRangePicker to your project
+Add this to project level gradle file
 ```
 allprojects {
 	repositories {
@@ -11,9 +11,9 @@ allprojects {
 	}
 }
 ```
-Add this line to app level gradle file inside dependencies
+Add dependency to app level gradle file
 ```
 dependencies {
-        compile 'com.github.VenkatramanRajagopalan:DateRangePicker:1.0'
+	compile 'com.github.VenkatramanRajagopalan:DateRangePicker:1.0'
 }
 ```
