@@ -33,7 +33,7 @@ showCalendar.setOnClickListener(new View.OnClickListener() {
 });
 
 ```
-# Get From and To dates from datePickerDialog
+# Get From and To dates
 
 Make activity implement OnDateRangePickedListener() and override default method
 ```
@@ -60,4 +60,4 @@ datePickerDialog.setOnDateRangePickedListener(new DatePickerDialog.DateRangePick
 ```
 
 
-More optimisations coming soon :)
+More optimizations coming soon :)
