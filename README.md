@@ -3,7 +3,6 @@ DateRangePicker library for Android
 
 # Screenshots
 
-
 # Add DateRangePicker to your project
 Add this to project level gradle file
 ```
