@@ -1,5 +1,5 @@
 # DateRangePicker
-A Simple, easy to use DateRangePicker library with Material design for Android
+A Simple, easy to use DateRangePicker library with Material design for Android. Example will be provided soon
 
 # Screenshots
 ![Screenshot 1](/screenshots/screenshot1.jpeg?raw=true "From Date") ![Screenshot 2](/screenshots/screenshot2.jpeg?raw=true "To Date")
