@@ -33,7 +33,7 @@ showCalendar.setOnClickListener(new View.OnClickListener() {
 });
 
 ```
-### Get From and To dates
+#### Get results back in activity
 
 Make activity implement OnDateRangePickedListener() and override default method
 ```
@@ -58,6 +58,6 @@ datePickerDialog.setOnDateRangePickedListener(new DatePickerDialog.DateRangePick
 	}
 });
 ```
-
+Results are in calendat format so as to provide better customization with the result. [Click here](https://developer.android.com/reference/java/util/Calendar.html "Calendar Android") to learn more about calendars in android.
 
 More optimizations coming soon :)
