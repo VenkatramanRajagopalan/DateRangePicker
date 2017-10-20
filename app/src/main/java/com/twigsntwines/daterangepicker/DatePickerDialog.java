@@ -75,7 +75,8 @@ public class DatePickerDialog extends DialogFragment implements DatePickerFragme
             listener.OnDateRangePicked(toDate, fromDate);
         }else{
             toDate.set(year,month,day,23,59,59);
-            listener.OnDateRangePicked(fromDate, toDate);
+            if(listener != null)
+                listener.OnDateRangePicked(fromDate, toDate);
         }
         getDialog().dismiss();
     }
