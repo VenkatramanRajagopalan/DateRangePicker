@@ -23,7 +23,7 @@ public class DatePickerDialog extends DialogFragment implements DatePickerFragme
     public DatePickerDialog() {
     }
 
-    interface DateRangePickedListener {
+    public interface DateRangePickedListener {
         void OnDateRangePicked(Calendar dateFrom, Calendar dateTo);
     }
 
