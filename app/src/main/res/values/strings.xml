@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DateRangePicker</string>
+    <string name="spinnerText">Select Date Range</string>
 </resources>
