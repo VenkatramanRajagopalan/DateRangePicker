@@ -139,6 +139,9 @@ public class DatePickerSpinner extends LinearLayout {
     /**Returns Calendar object for ToDate**/
     private Calendar getToDate(){
         cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY,23);
+        cal.set(Calendar.MINUTE,59);
+        cal.set(Calendar.SECOND,59);
         return cal;
     }
 }
