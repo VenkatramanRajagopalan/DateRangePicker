@@ -23,7 +23,7 @@ allprojects {
 Add dependency to app level gradle file
 ```
 dependencies {
-	compile 'com.github.VenkatramanRajagopalan:DateRangePicker:2.0'
+	compile 'com.github.VenkatramanRajagopalan:DateRangePicker:2.1'
 }
 ```
 
