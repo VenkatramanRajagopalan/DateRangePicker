@@ -20,6 +20,8 @@ public class DatePickerDialog extends DialogFragment implements DatePickerFragme
 
     private DateRangePickedListener listener;
 
+    private boolean datePicked;
+
     public DatePickerDialog() {
     }
 
@@ -44,9 +46,18 @@ public class DatePickerDialog extends DialogFragment implements DatePickerFragme
 
         viewPager = (CustomViewPager) view.findViewById(R.id.viewpager);
         setupViewPager(viewPager);
+        datePicked = false;
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if(!datePicked && listener != null){
+            listener.OnDatePickCancelled();
+        }
     }
 
     @Override
@@ -63,16 +74,18 @@ public class DatePickerDialog extends DialogFragment implements DatePickerFragme
         cal = Calendar.getInstance();
         cal.set(year,month,day);
         Calendar toDate = cal;
-        if(fromDate.after(toDate)){
-            fromDate.set(Calendar.HOUR_OF_DAY,23);
-            fromDate.set(Calendar.MINUTE,59);
-            fromDate.set(Calendar.SECOND,59);
-            toDate.set(year,month,day,0,0,0);
-            listener.OnDateRangePicked(toDate, fromDate);
-        }else{
-            toDate.set(year,month,day,23,59,59);
-            if(listener != null)
+        datePicked = true;
+        if(listener != null) {
+            if (fromDate.after(toDate)) {
+                fromDate.set(Calendar.HOUR_OF_DAY, 23);
+                fromDate.set(Calendar.MINUTE, 59);
+                fromDate.set(Calendar.SECOND, 59);
+                toDate.set(year, month, day, 0, 0, 0);
+                listener.OnDateRangePicked(toDate, fromDate);
+            } else {
+                toDate.set(year, month, day, 23, 59, 59);
                 listener.OnDateRangePicked(fromDate, toDate);
+            }
         }
         getDialog().dismiss();
     }

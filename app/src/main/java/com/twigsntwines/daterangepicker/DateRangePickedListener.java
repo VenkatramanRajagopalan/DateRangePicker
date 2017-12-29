@@ -6,4 +6,6 @@ public interface DateRangePickedListener {
 
     void OnDateRangePicked(Calendar fromDate, Calendar toDate);
 
+    void OnDatePickCancelled();
+
 }
