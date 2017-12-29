@@ -50,6 +50,10 @@ protected void onCreate(Bundle savedInstanceState) {
 		Log.e("From Date",fromDate.getTime());
 		Log.e("To Date",toDate.getTime());
 	    }
+	    @Override
+	    public void OnDatePickCancelled() {
+		Log.e(TAG,"Date Pick Cancelled");
+	    }
 	}); // Handle results when a data is picked
 }
 ```
@@ -80,6 +84,11 @@ public class DemoActivity extends AppCompatActivity implements DateRangePickedLi
 		Log.e("From Date",fromDate.getTime());
 		Log.e("To Date",toDate.getTime());
 	}
+	
+	@Override
+	public void OnDatePickCancelled() {
+		Log.e(TAG,"Date Pick Cancelled");
+	}
 }
 ```
 
@@ -90,6 +99,10 @@ datePickerDialog.setOnDateRangePickedListener(new DateRangePickedListener() {
 	public void OnDateRangePicked(Calendar fromDate, Calendar toDate) {
         	Log.e("From Date",fromDate.getTime());
 		Log.e("To Date",toDate.getTime());   
+	}
+	@Override
+	public void OnDatePickCancelled() {
+		Log.e(TAG,"Date Pick Cancelled");
 	}
 });
 ```
