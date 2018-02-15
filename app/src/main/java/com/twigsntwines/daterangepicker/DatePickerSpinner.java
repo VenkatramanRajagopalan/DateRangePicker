@@ -1,5 +1,6 @@
 package com.twigsntwines.daterangepicker;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -13,7 +14,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -22,7 +22,7 @@ public class DatePickerSpinner extends LinearLayout {
 
     private static final String TAG = DatePickerSpinner.class.getSimpleName();
     TextView spinnerText;
-    Spinner dateSpinner;
+    CustomSpinner dateSpinner;
 
     private Calendar cal;
 
@@ -49,10 +49,10 @@ public class DatePickerSpinner extends LinearLayout {
             spinnerText.setEllipsize(TextUtils.TruncateAt.END);
             spinnerText.setText(R.string.spinnerText);
             spinnerText.setPadding(8,8,8,8);
-            spinnerText.setTextColor(R.color.black);
+            spinnerText.setTextColor(Color.BLACK);
             spinnerText.setGravity(Gravity.START|Gravity.CENTER);
             spinnerText.setMaxLines(1);
-            dateSpinner = (Spinner) getChildAt(1);
+            dateSpinner = (CustomSpinner) getChildAt(1);
             initializeSpinner();
         }
 
@@ -100,7 +100,7 @@ public class DatePickerSpinner extends LinearLayout {
                 } else {
                     android.support.v4.app.FragmentManager fragmentManager = activity.getSupportFragmentManager();
                     DatePickerDialog datePickerDialog = DatePickerDialog.newInstance();
-                    datePickerDialog.setOnDateRangePickedListener((DateRangePickedListener) listener);
+                    datePickerDialog.setOnDateRangePickedListener(listener);
                     datePickerDialog.show(fragmentManager,"Date Picker");
                 }
             }
